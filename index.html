@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+  <script src="object.js"></script>
+  <script src="sketch.js"></script>
+  <script src="interface.js"></script>
+  <script src="form.js"></script>
+  <link rel="stylesheet" href="styles-tag.css">
+  <link rel="stylesheet" href="styles-id.css">
+  <link rel="stylesheet" href="styles-class.css">
+</head>
+<body>
+  <div id ="tableD">
+    <h2>Tables</h2>
+    <p>
+      Note: The red background of the 'Max' table denotes that the measurements may be inaccurate. <br/><br/>
+      Units the same as given in "Input".
+    </p>
+    <table id="maxT">
+      <thead>
+        <tr class="rows">
+          <td class="headerCell">Var</td>
+          <td class="headerCell">Val</td>
+          <td class="headerCell">Time</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rows">
+          <td class="varCellMax">sMin</td>
+          <td class="valCellMax valDC" ></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax">sMax</td>
+          <td class="valCellMax valDC"></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax">hMax</td>
+          <td class="valCellMax valDC"></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax">vMax</td>
+          <td class="valCellMax valDC"></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax">aMax</td>
+          <td class="valCellMax valDC"></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax">FMax</td>
+          <td class="valCellMax valDC"></td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+        <tr class="rows">
+          <td class="varCellMax" colspan="2">Total t</td>
+          <td class="timeCellMax valDC"></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="currT">
+      <tbody>
+        <tr>
+          <td class="varCellCurr">x</td>
+          <td class="valCellCurr"></td>
+          <td class="varCellCurr">θ</td>
+          <td class="valCellCurr"></td>
+        </tr>
+        <tr>
+          <td class="varCellCurr">y</td>
+          <td class="valCellCurr"></td>
+          <td class="varCellCurr">t</td>
+          <td class="valCellCurr"></td>
+        </tr>
+        <tr>
+          <td class="varCellCurr">vX</td>
+          <td class="valCellCurr"></td>
+          <td class="varCellCurr">aX</td>
+          <td class="valCellCurr"></td>
+        </tr>
+        <tr>
+          <td class="varCellCurr">vY</td>
+          <td class="valCellCurr"></td>
+          <td class="varCellCurr">aY</td>
+          <td class="valCellCurr"></td>
+        </tr>
+        <tr>
+          <td class="varCellCurr">v</td>
+          <td class="valCellCurr"></td>
+          <td class="varCellCurr">a</td>
+          <td class="valCellCurr"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id = "dataD">
+    <h2>Input data</h2>
+    <p>Enter numbers with the maximum accuracy of 3 decimal places. The number 0.0001 will be changed to 0.</p>
+    <div id="modeD">
+      <label id="modeL">Mode: </label>
+      <select id="modeSel">
+        <option value="1">Simple</option>
+        <option value="2">Scientific</option>
+        <option value="3">Max Range</option>
+      </select>
+    </div>
+    <h3 id="ballH">Ball</h3>
+    <form id="ballF" action="#">
+      <div class="form-boxDC ballFormD">
+        <label class="formLC" for="in-m">Mass: </label>
+        <input id="in-m" class="form-numInC ball-numInC" type="text"/>
+        <select id="sel-m" class="form-select ball-select">
+          <option value="1">kg</option>
+          <option value="0.001">g</option>
+          <option value="0.4535">lb</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC ballFormD">
+        <label class="formLC" for="in-r">Radius: </label>
+        <input id="in-r" class="form-numInC ball-numInC" type="text"/>
+        <select id="sel-r" class="form-select ball-select">
+          <option value="1">m</option>
+          <option value="0.01">cm</option>
+          <option value="0.0254">in</option>
+          <option value="0.304">ft</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC ballFormD">
+        <label class="formLC" for="in-y">Y pos: </label>
+        <input id="in-y" class="form-numInC ball-numInC" type="text"/>
+        <select id="sel-y" class="form-select ball-select">
+          <option value="1">m</option>
+          <option value="1000">km</option>
+          <option value="0.304">ft</option>
+          <option value="1609.344">mile</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC ballFormD">
+        <label class="formLC" for="in-vy">Speed type: </label>
+        <select id="sel-v-type" class="form-select-type ball-select">
+          <option value="1">speed x, speed y</option>
+          <option value="2">speed, angle</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC ballFormD">
+        <label id="lab-1" class="formLC" for="in-vx">Speed x: </label>
+        <input id="in-v-1" class="form-numInC ball-numInC" type="text"/>
+        <select id="sel-v-1" class="form-select ball-select">
+          <option value="1">m/s</option>
+          <option value="0.2778">km/h</option>
+          <option value="0.447">mph</option>
+          <option value="0.5144">kn</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC ballFormD">
+        <label id="lab-2" class="formLC" for="in-vy">Speed y: </label>
+        <input id="in-v-2" class="form-numInC ball-numInC" type="text"/>
+        <select id="sel-v-2" class="form-select ball-select">
+          <option class="op-v-2" value="1">°</option>
+          <option class="op-v-2" value="0.005556">π</option>
+        </select>
+      </div>
+
+    </form>
+
+    <h3 id="worldH">World</h3>
+    <form id="worldF" action="#">
+
+      <div class="form-boxDC">
+        <label class="formLC" for="in-vw">Gravitation: </label>
+        <input id="in-g" class="form-numInC world-numBC" type="text"/>
+        <select id="sel-g" class="form-select ball-select">
+          <option value="1">m/s2</option>
+          <option value="9.807">g</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC">
+        <label class="formLC" for="in-wIn">Air included: </label>
+        <input id="in-wIn" class="form-chbInC world-chbBC" type="checkbox"/>
+      </div>
+
+      <div class="form-boxDC worldEx">
+        <label class="formLC" for="in-vd">Air density: </label>
+        <input id="in-vd" class="form-numInC world-numBC" type="text"/>
+        <select id="sel-d" class="form-select ball-select">
+          <option value="1">kg/m3</option>
+          <option value="1000">g/cm3</option>
+        </select>
+      </div>
+
+      <div class="form-boxDC worldEx">
+        <label class="formLC" for="in-vw">Air speed: </label>
+        <input id="in-vw" class="form-numInC world-numBC" type="text"/>
+        <select id="sel-air-v" class="form-select ball-select">
+          <option value="1">m/s</option>
+          <option value="0.2778">km/h</option>
+          <option value="0.447">mph</option>
+          <option value="0.5144">kn</option>
+        </select>
+      </div>
+
+    </form>
+
+    <h3 id="showH">Show</h3>
+    <form id="showF" action="#">
+      <div class="form-boxDC">
+        <label class="formLC" for="in-sV">Speed vec: </label>
+        <input id="in-sV" class="form-chbInC show-chbBC" type="checkbox"/>
+      </div>
+      <div class="form-boxDC">
+        <label class="formLC" for="in-wV">Wind vec: </label>
+        <input id="in-wV" class="form-chbInC show-chbBC" type="checkbox"/>
+      </div>
+      <div class="form-boxDC">
+        <label class="formLC" for="in-tail">Tail: </label>
+        <input id="in-tail" class="form-chbInC show-chbBC" type="checkbox"/>
+      </div>
+      <div class="form-boxDC showEx">
+        <label class="formLC" for="in-tSi">Tail size: </label>
+        <input id="in-tSi" value="200" min="50" max="500" step="1" class="form-rgInC show-rgBC" type="range"/>
+      </div>
+      <div class="form-boxDC showEx">
+        <label class="formLC" for="in-tSp">Tail space: </label>
+        <input id="in-tSp" value="21" min="1" max="41" step="1" class="form-rgInC show-rgBC" type="range"/>
+      </div>
+    </form>
+    <div class="form-buttonsC">
+      <button id="reset-formB" class="inputBC">⭯</button>
+      <button id="default-formB" class="inputBC">Default</button>
+      <button id="apply-formB" class="inputBC">➔</button>
+      <br/>
+      <button id="set-default-formB" class="inputBC">Set default</button>
+      <p id="defaultP">New default set.</p>
+    </div>
+  </div>
+</body>
+</html>

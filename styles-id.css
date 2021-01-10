@@ -1,0 +1,107 @@
+/* INDIVIDUAL CONTROLS*/
+
+#resetB {
+  padding-bottom: 6px;
+}
+
+/*MENU BUTTONS*/
+
+#menuInputB {
+  background: #22D;
+  border-top-right-radius: 10px;
+  color: #EEE;
+  padding-top: 8px;
+  z-index: 2;
+}
+#menuTableB {
+  background: #2D2;
+  border-bottom-right-radius: 10px;
+  color: #EEE;
+  padding-top: 8px;
+  z-index: 2;
+}
+#menuInB {
+  border: none;
+  border-top-left-radius: 10px;
+  color: #EEE;
+  padding-bottom: 2px;
+  opacity: 0.3;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+#menuInB:hover {
+  opacity: 1;
+}
+
+/*MAIN DIVS*/
+
+#mainInputD {
+  border-color: #22D;
+}
+#mainTableD {
+  border-color: #2D2;
+}
+
+/*MAIN DIVS ELEMENTS*/
+#modeD {
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-size: 20px;
+  left: 5%;
+  position: relative;
+  width: 90%;
+}
+#modeL {
+  width: 20%;
+}
+#modeSel {
+  border-style: inset;
+  color: #777;
+  font-size: 15px;
+  left: 0%;
+  position: relative;
+  width: 77%;
+}
+
+#sel-v-type {
+  border-style: inset;
+  color: #777;
+  font-size: 15px;
+  left: 0%;
+  position: relative;
+  width: 50%;
+}
+#sel-v-2 {
+  display: none;
+}
+#reset-formB {
+  left: 6.25%;
+}
+#default-formB{
+  left: 6.25%;
+}
+#set-default-formB {
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 13px;
+  height: 20px;
+  left: 34.75%;
+  position: relative;
+  width: 20%;
+}
+#apply-formB {
+  left: 6.25%;
+}
+#defaultP {
+  border: none;
+  display: none;
+  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-size: 13px;
+  left: 35%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}

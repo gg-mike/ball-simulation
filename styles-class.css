@@ -1,0 +1,102 @@
+/*CELLS*/
+
+.headerCell {
+  font-weight: bold;
+  height: 30px;
+}
+.varCellMax {
+  font-weight: bold;
+  height: 40px;
+}
+.varCellCurr {
+  font-weight: bold;
+  height: 40px;
+}
+.valCellCurr {
+  height: 40px;
+}
+
+/* BUTTONS*/
+
+.leftBC {
+  border: 1px solid;
+  border-bottom-left-radius: 10px;
+  border-right: .5px solid;
+  border-top-left-radius: 10px;
+}
+.centerBC {
+  border: 1px solid;
+  border-left: .5px solid;
+  border-right: .5px solid;
+}
+.rightBC {
+  border: 1px solid;
+  border-bottom-right-radius: 10px;
+  border-left: 0.5px solid;
+  border-top-right-radius: 10px;
+}
+.mainBC {
+  border-color: #333;
+  font-size: 20px;
+  height: 40px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 40px;
+}
+.mainBC:hover {
+  background: #DDD;
+}
+.menuBC {
+  border: none;
+  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-size: 20px;
+  position: absolute;
+}
+
+/*MAIN DIVS*/
+
+.mainDC {
+  background: #EEE;
+  border-right: 2px solid;
+  box-sizing: border-box;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 400px;
+}
+
+/*MAIN DIVS ELEMENTS*/
+
+.form-boxDC {
+  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-size: 20px;
+}
+.form-buttonsC {
+  left: 5%;
+  position: relative;
+  top: 10%;
+  margin: 15px;
+}
+.form-chbInC {
+  width: 58%;
+}
+.form-rgInC {
+  width: 58%;
+}
+.inputBC {
+  border: 1px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-size: 20px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0px;
+  position: relative;
+  width: 25%;
+}
+.inputBC:hover {
+  background: #DDD;
+}
