@@ -93,16 +93,16 @@ function mainControlsEvents(obj) {
 function menuOutButtonPressed(divSelect) {
   menuOut = true;
   whichDivOut = divSelect;
-  document.getElementById('menuInputB').style.left = '400px';
-  document.getElementById('menuTableB').style.left = '400px';
+  document.getElementById('menuInputB').style.left = '450px';
+  document.getElementById('menuTableB').style.left = '450px';
   mainDivsState(divSelect, obj, true);
   resizeAll();
 }
 function menuInButtonPressed() {
   menuOut = false;
   whichDivOut = '';
-  document.getElementById('menuInputB').style.left = '400px';
-  document.getElementById('menuTableB').style.left = '400px';
+  document.getElementById('menuInputB').style.left = '450px';
+  document.getElementById('menuTableB').style.left = '450px';
   mainDivsState('Input', obj, false);
   resizeAll();
 }
@@ -200,13 +200,13 @@ function mainDivs(obj) {
   inputD.class('mainDC');
   inputD.child('#dataD');
   inputD.hide();
-  inputD.size(400, windowHeight);
+  inputD.size(450, windowHeight);
   inputD.position(0, 0);
   tableD.id('mainTableD');
   tableD.class('mainDC');
   tableD.child('#tableD');
   tableD.hide();
-  tableD.size(400, windowHeight);
+  tableD.size(450, windowHeight);
   tableD.position(0, 0);
 
   cellsResize();
@@ -239,13 +239,13 @@ function mainDivsState(divSelect, obj, show) {
 function cellsResize() {
   var varCellMaxs = selectAll('.varCellMax');
   var valMs = selectAll('.valDC');
-  for (let varCellMax of varCellMaxs) { varCellMax.size(400 * .9 * .25); }
-  for (let valM of valMs) { valM.size(400 * .9 * .375); }
+  for (let varCellMax of varCellMaxs) { varCellMax.size(450 * .9 * .25); }
+  for (let valM of valMs) { valM.size(450 * .9 * .375); }
 
   var varCellCurrs = selectAll('.varCellCurr');
   var valCellCurrs = selectAll('.valCellCurr');
-  for (let varCellCurr of varCellCurrs) { varCellCurr.size(400 * .9 * .2); }
-  for (let valCellCurr of valCellCurrs) { valCellCurr.size(400 * .9 * .3); }
+  for (let varCellCurr of varCellCurrs) { varCellCurr.size(450 * .9 * .2); }
+  for (let valCellCurr of valCellCurrs) { valCellCurr.size(450 * .9 * .3); }
 }
 
 function resizeAll() {
@@ -289,6 +289,6 @@ function windowResized() {
   mainDivsState('Input', obj, false);
   var inputD = select('#mainInputD');
   var tableD = select('#mainTableD');
-  inputD.size(400, windowHeight);
-  tableD.size(400, windowHeight);
+  inputD.size(450, windowHeight);
+  tableD.size(450, windowHeight);
 }

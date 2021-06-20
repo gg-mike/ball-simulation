@@ -1,9 +1,9 @@
 /*TABLES*/
 
 table {
-  background: #EEE;
+  background: #eee;
   display: inline-block;
-  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   font-size: 20px;
   left: 5%;
   margin-bottom: 10px;
@@ -13,8 +13,8 @@ table {
   width: 90%;
 }
 tr {
-  background: #FFF;
-  border: inset #EEE;
+  background: #fff;
+  border: inset #eee;
   position: relative;
 }
 
@@ -22,14 +22,14 @@ tr {
 
 h2 {
   color: #333;
-  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   font-size: 30px;
   font-style: normal;
   text-align: center;
 }
 h3 {
-  color: #AAA;
-  font-family: 'Tahoma', 'Geneva', sans-serif;
+  color: #aaa;
+  font-family: "Tahoma", "Geneva", sans-serif;
   font-size: 20px;
   font-style: normal;
   left: 10%;
@@ -45,7 +45,7 @@ p {
   border-radius: 10px;
   box-sizing: border-box;
   color: #333;
-  font-family: 'Tahoma', 'Geneva', sans-serif;
+  font-family: "Tahoma", "Geneva", sans-serif;
   font-size: 18px;
   left: 5%;
   padding: 10px;
@@ -90,7 +90,7 @@ option {
 }
 form {
   box-sizing: border-box;
-  border: 4px solid #AAA;
+  border: 4px solid #aaa;
   left: 5%;
   margin-bottom: 20px;
   border-radius: 10px;
